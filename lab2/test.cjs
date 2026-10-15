@@ -51,13 +51,21 @@ for (const method of ['negative', 'brightness', 'gamma', 'linear-rgb', 'linear-v
 }
 function hFor(data) { return P.histograms(data).v; }
 const rows = [];
-for (const key of ['low-contrast', 'skewed', 'color', 'constant']) {
+const samples = JSON.parse(fs.readFileSync(path.join(__dirname, 'samples', 'manifest.json'), 'utf8'));
+ok(samples.length === 10);
+for (const { id: key } of samples) {
   const input = new Uint8ClampedArray(gunzipSync(fs.readFileSync(path.join(__dirname, 'samples', key + '.rgba.gz'))));
   for (const method of ['original', 'linear-v', 'equal-rgb', 'equal-v']) {
     const output = P.process(input, method);
     rows.push({ image: key, method, ...P.stats(output) });
     if (key === 'skewed' && method === 'linear-v') equal(output, input);
-    if (key === 'constant') equal(output, input);
+    if (key === 'constant' || key === 'full-range') equal(output, input);
+    ok(output.length === 640 * 400 * 4);
+    if (key === 'quantized') ok(P.histograms(output).v.filter(n => n > 0).length === 6);
+    if (key === 'clipped') {
+      // Вся первая строка пересвеченного неба остаётся белой.
+      equal(output.slice(0, 640 * 4), input.slice(0, 640 * 4));
+    }
   }
 }
 console.log(JSON.stringify({ status: 'PASS', checks, metrics: rows }, null, 2));

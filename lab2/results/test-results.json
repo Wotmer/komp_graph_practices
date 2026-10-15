@@ -1,6 +1,6 @@
 {
   "status": "PASS",
-  "checks": 15036,
+  "checks": 15089,
   "metrics": [
     {
       "image": "low-contrast",
@@ -145,6 +145,222 @@
       "mean": 180,
       "sd": 0,
       "entropy": 0
+    },
+    {
+      "image": "fog",
+      "method": "original",
+      "min": 120,
+      "max": 190,
+      "mean": 156.24884765625,
+      "sd": 19.31329004857093,
+      "entropy": 2.1478279448901167
+    },
+    {
+      "image": "fog",
+      "method": "linear-v",
+      "min": 0,
+      "max": 255,
+      "mean": 131.92956640625,
+      "sd": 70.28476778134521,
+      "entropy": 2.1478279448901167
+    },
+    {
+      "image": "fog",
+      "method": "equal-rgb",
+      "min": 0,
+      "max": 255,
+      "mean": 161.701859375,
+      "sd": 86.69084845540344,
+      "entropy": 2.1478279448901167
+    },
+    {
+      "image": "fog",
+      "method": "equal-v",
+      "min": 0,
+      "max": 255,
+      "mean": 161.701859375,
+      "sd": 86.69084845540344,
+      "entropy": 2.1478279448901167
+    },
+    {
+      "image": "document",
+      "method": "original",
+      "min": 190,
+      "max": 235,
+      "mean": 228.3307421875,
+      "sd": 10.011990089033635,
+      "entropy": 1.2476131649012105
+    },
+    {
+      "image": "document",
+      "method": "linear-v",
+      "min": 0,
+      "max": 255,
+      "mean": 217.2075390625,
+      "sd": 56.73461050452392,
+      "entropy": 1.2476131649012105
+    },
+    {
+      "image": "document",
+      "method": "equal-rgb",
+      "min": 0,
+      "max": 255,
+      "mean": 189.6975625,
+      "sd": 88.78189409479049,
+      "entropy": 1.2476131649012105
+    },
+    {
+      "image": "document",
+      "method": "equal-v",
+      "min": 0,
+      "max": 255,
+      "mean": 189.6975625,
+      "sd": 88.78189409479049,
+      "entropy": 1.2476131649012105
+    },
+    {
+      "image": "noise",
+      "method": "original",
+      "min": 119,
+      "max": 139,
+      "mean": 128.270953125,
+      "sd": 2.1862439317360574,
+      "entropy": 3.172049056960535
+    },
+    {
+      "image": "noise",
+      "method": "linear-v",
+      "min": 0,
+      "max": 255,
+      "mean": 118.33055859374997,
+      "sd": 27.880082365998273,
+      "entropy": 3.172049056960535
+    },
+    {
+      "image": "noise",
+      "method": "equal-rgb",
+      "min": 0,
+      "max": 255,
+      "mean": 144.19168359375,
+      "sd": 72.75174801632699,
+      "entropy": 3.16724750777908
+    },
+    {
+      "image": "noise",
+      "method": "equal-v",
+      "min": 0,
+      "max": 255,
+      "mean": 144.19168359375,
+      "sd": 72.75174801632699,
+      "entropy": 3.16724750777908
+    },
+    {
+      "image": "quantized",
+      "method": "original",
+      "min": 110,
+      "max": 125,
+      "mean": 117.490625,
+      "sd": 5.122551816172775,
+      "entropy": 2.584948397157536
+    },
+    {
+      "image": "quantized",
+      "method": "linear-v",
+      "min": 0,
+      "max": 255,
+      "mean": 127.340625,
+      "sd": 87.08338087493718,
+      "entropy": 2.584948397157536
+    },
+    {
+      "image": "quantized",
+      "method": "equal-rgb",
+      "min": 0,
+      "max": 255,
+      "mean": 127.340625,
+      "sd": 87.08338087493718,
+      "entropy": 2.584948397157536
+    },
+    {
+      "image": "quantized",
+      "method": "equal-v",
+      "min": 0,
+      "max": 255,
+      "mean": 127.340625,
+      "sd": 87.08338087493718,
+      "entropy": 2.584948397157536
+    },
+    {
+      "image": "clipped",
+      "method": "original",
+      "min": 200,
+      "max": 255,
+      "mean": 239.47693359375,
+      "sd": 22.317102448366875,
+      "entropy": 1.3045022440470944
+    },
+    {
+      "image": "clipped",
+      "method": "linear-v",
+      "min": 0,
+      "max": 255,
+      "mean": 182.9788828125,
+      "sd": 103.53920894250348,
+      "entropy": 1.3045022440470944
+    },
+    {
+      "image": "clipped",
+      "method": "equal-rgb",
+      "min": 0,
+      "max": 255,
+      "mean": 191.28706640625,
+      "sd": 88.60964369728417,
+      "entropy": 1.3045022440470944
+    },
+    {
+      "image": "clipped",
+      "method": "equal-v",
+      "min": 0,
+      "max": 255,
+      "mean": 191.28706640625,
+      "sd": 88.60964369728417,
+      "entropy": 1.3045022440470944
+    },
+    {
+      "image": "full-range",
+      "method": "original",
+      "min": 0,
+      "max": 255,
+      "mean": 127.5,
+      "sd": 73.90027063549903,
+      "entropy": 8
+    },
+    {
+      "image": "full-range",
+      "method": "linear-v",
+      "min": 0,
+      "max": 255,
+      "mean": 127.5,
+      "sd": 73.90027063549903,
+      "entropy": 8
+    },
+    {
+      "image": "full-range",
+      "method": "equal-rgb",
+      "min": 0,
+      "max": 255,
+      "mean": 127.5,
+      "sd": 73.90027063549903,
+      "entropy": 8
+    },
+    {
+      "image": "full-range",
+      "method": "equal-v",
+      "min": 0,
+      "max": 255,
+      "mean": 127.5,
+      "sd": 73.90027063549903,
+      "entropy": 8
     }
   ]
 }
