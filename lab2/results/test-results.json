@@ -1,0 +1,150 @@
+{
+  "status": "PASS",
+  "checks": 15036,
+  "metrics": [
+    {
+      "image": "low-contrast",
+      "method": "original",
+      "min": 94,
+      "max": 151,
+      "mean": 120.44889453125,
+      "sd": 13.6367136269544,
+      "entropy": 4.897110410966909
+    },
+    {
+      "image": "low-contrast",
+      "method": "linear-v",
+      "min": 0,
+      "max": 255,
+      "mean": 118.39409374999997,
+      "sd": 61.04715693464938,
+      "entropy": 4.897110410966909
+    },
+    {
+      "image": "low-contrast",
+      "method": "equal-rgb",
+      "min": 0,
+      "max": 255,
+      "mean": 132.58773828124998,
+      "sd": 75.66556363858002,
+      "entropy": 4.892507653172099
+    },
+    {
+      "image": "low-contrast",
+      "method": "equal-v",
+      "min": 0,
+      "max": 255,
+      "mean": 132.58773828124998,
+      "sd": 75.66556363858002,
+      "entropy": 4.892507653172099
+    },
+    {
+      "image": "skewed",
+      "method": "original",
+      "min": 0,
+      "max": 255,
+      "mean": 38.58260156249999,
+      "sd": 20.32840947219857,
+      "entropy": 4.9553554528168755
+    },
+    {
+      "image": "skewed",
+      "method": "linear-v",
+      "min": 0,
+      "max": 255,
+      "mean": 38.58260156249999,
+      "sd": 20.32840947219857,
+      "entropy": 4.9553554528168755
+    },
+    {
+      "image": "skewed",
+      "method": "equal-rgb",
+      "min": 0,
+      "max": 255,
+      "mean": 134.12173046875003,
+      "sd": 73.72947944156549,
+      "entropy": 4.944346317052467
+    },
+    {
+      "image": "skewed",
+      "method": "equal-v",
+      "min": 0,
+      "max": 255,
+      "mean": 134.12173046875003,
+      "sd": 73.72947944156549,
+      "entropy": 4.944346317052467
+    },
+    {
+      "image": "color",
+      "method": "original",
+      "min": 71,
+      "max": 186,
+      "mean": 129.81312499999999,
+      "sd": 26.040198784463517,
+      "entropy": 6.676439568349344
+    },
+    {
+      "image": "color",
+      "method": "linear-v",
+      "min": 0,
+      "max": 255,
+      "mean": 130.4121875,
+      "sd": 57.741729182323965,
+      "entropy": 6.676439568349344
+    },
+    {
+      "image": "color",
+      "method": "equal-rgb",
+      "min": 71,
+      "max": 255,
+      "mean": 201.05875,
+      "sd": 38.92747645863396,
+      "entropy": 6.811424283367446
+    },
+    {
+      "image": "color",
+      "method": "equal-v",
+      "min": 0,
+      "max": 255,
+      "mean": 128.71875,
+      "sd": 73.66930940654662,
+      "entropy": 6.633125578237674
+    },
+    {
+      "image": "constant",
+      "method": "original",
+      "min": 180,
+      "max": 180,
+      "mean": 180,
+      "sd": 0,
+      "entropy": 0
+    },
+    {
+      "image": "constant",
+      "method": "linear-v",
+      "min": 180,
+      "max": 180,
+      "mean": 180,
+      "sd": 0,
+      "entropy": 0
+    },
+    {
+      "image": "constant",
+      "method": "equal-rgb",
+      "min": 180,
+      "max": 180,
+      "mean": 180,
+      "sd": 0,
+      "entropy": 0
+    },
+    {
+      "image": "constant",
+      "method": "equal-v",
+      "min": 180,
+      "max": 180,
+      "mean": 180,
+      "sd": 0,
+      "entropy": 0
+    }
+  ]
+}
