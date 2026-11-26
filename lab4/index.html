@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="ru">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Лабораторная 4 · Отсечение</title><link rel="stylesheet" href="style.css"></head>
+<body><main>
+<header><div><p class="eyebrow">КОМПЬЮТЕРНАЯ ГРАФИКА / ЛАБОРАТОРНАЯ 04</p><h1>Геометрия в границах окна</h1><p class="subtitle">Отсечение отрезков и выпуклых многоугольников с пошаговыми вычислениями.</p></div><span class="badge">5 алгоритмов · без установки</span></header>
+<div class="workspace">
+<aside class="panel controls">
+<h2>Условия задачи</h2>
+<label for="variant">Вариант</label><select id="variant"><option value="all">Все алгоритмы</option></select>
+<label for="mode">Задача</label><select id="mode"><option value="rect">Часть 1 · отрезки и прямоугольник</option><option value="lines">Часть 2 · отрезки и выпуклое окно</option><option value="polygon">Часть 2 · выпуклый многоугольник</option></select>
+<label for="algorithm">Алгоритм</label><select id="algorithm"></select>
+<p id="methodNote" class="hint"></p>
+<label for="example">Готовый пример</label><select id="example"></select>
+<div class="upload"><label for="file">Загрузить координаты из TXT</label><input id="file" type="file" accept=".txt,text/plain"></div>
+<label for="data">Координаты</label><textarea id="data" spellcheck="false" rows="12" aria-describedby="format"></textarea>
+<details><summary>Формат входных данных</summary><p id="format" class="hint"></p><p class="hint">Координаты разделяются пробелами, дробная часть - точкой. Комментарии начинаются с #. Вершины перечисляются по обходу границы.</p></details>
+<button id="apply" class="primary wide">Выполнить отсечение</button><p id="error" class="error" role="alert"></p><p id="notice" class="hint" aria-live="polite"></p>
+<div class="divider"></div>
+<label class="check"><input id="showOriginal" type="checkbox" checked> Исходные фигуры</label><label class="check"><input id="showLabels" type="checkbox" checked> Номера и координаты</label>
+<label for="zoom">Масштаб <output id="zoomValue"></output></label><input id="zoom" type="range" min="0" max="100" step="0.1" value="50">
+<button id="fit" class="wide">Вписать всё</button><p class="hint">Колесо мыши меняет масштаб, перетаскивание сдвигает вид. Ось Y направлена вверх.</p>
+<div class="export"><button id="saveInput">Исходные TXT</button><button id="saveResult">Результат JSON</button><button id="savePng">Рисунок PNG</button></div>
+</aside>
+<section class="panel visualization">
+<div class="canvas-heading"><div><p class="eyebrow" id="partTitle">ЧАСТЬ 1</p><h2 id="figureTitle"></h2></div><div class="legend"><span class="window">Окно</span><span class="original">Исходное</span><span class="result">Видимая часть</span><span class="current">Текущий шаг</span></div></div>
+<div class="stats"><div><strong id="inputCount">0</strong><span id="inputLabel">отрезков</span></div><div><strong id="visibleCount">0</strong><span id="visibleLabel">видимых</span></div><div><strong id="cutCount">0</strong><span id="cutLabel">изменённых</span></div></div>
+<div class="canvas-wrap"><canvas id="canvas" aria-label="Координатная плоскость с исходными фигурами, окном и результатом отсечения"></canvas><span id="cursor" class="cursor">x: — · y: —</span></div>
+<div class="canvas-tools"><p id="gridNote" class="hint"></p><span class="hint">Единый масштаб по X и Y</span></div>
+<div class="trace-heading"><h2>Разбор по шагам</h2><label for="object">Объект <select id="object"></select></label></div>
+<div class="playback"><button id="first" title="Начальное состояние">В начало</button><button id="prev" aria-label="Предыдущий шаг">←</button><button id="play">Воспроизвести</button><button id="next" aria-label="Следующий шаг">→</button><button id="last">Итог</button></div>
+<label class="step-label" for="step">Шаг <output id="stepValue"></output></label><input id="step" type="range" min="0" max="1" value="1"><p id="explanation" class="explanation" aria-live="polite"></p>
+<p class="hint">Счётчики и таблица показывают итог. Жёлтым выделен промежуточный объект выбранного шага.</p>
+</section></div>
+<section class="panel results"><div class="section-heading"><div><p class="eyebrow">РЕЗУЛЬТАТЫ ВЫЧИСЛЕНИЙ</p><h2 id="resultsTitle">Видимые части</h2></div><p id="formula" class="formula"></p></div><div class="table-scroll"><table id="results"><thead></thead><tbody></tbody></table></div></section>
+<section class="panel theory"><h2>Как устроено отсечение</h2><p id="theory"></p><p class="hint">Граница включена в окно. Касание может дать точку или отрезок нулевой площади. Для метода средней точки точность составляет 10⁻⁶ единицы; интервалы короче этой величины считаются граничными.</p></section>
+<footer>Лабораторная работа 4 · Алгоритмы отсечения отрезков и многоугольников · HTML / CSS / JavaScript</footer>
+</main><script src="algorithms.js"></script><script src="app.js"></script></body></html>

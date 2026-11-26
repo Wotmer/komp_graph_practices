@@ -1,0 +1,7 @@
+{
+  "status": "PASS",
+  "checks": 36243,
+  "lineCases": 3211,
+  "polygonCases": 515,
+  "midpointTolerance": 0.000001
+}

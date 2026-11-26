@@ -1,0 +1,5 @@
+{
+  "status": "PASS",
+  "checks": 105,
+  "scope": "DOM stub and event handlers; no browser visual verification"
+}
