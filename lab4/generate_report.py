@@ -15,8 +15,7 @@ from docx.oxml import OxmlElement
 from docx.oxml.ns import qn
 
 ROOT = Path(__file__).resolve().parent
-OUT = ROOT / 'output'
-OUT.mkdir(exist_ok=True)
+OUT = ROOT
 DATA = json.loads((ROOT / 'results/examples.json').read_text())
 TESTS = json.loads((ROOT / 'results/test-results.json').read_text())
 UI = json.loads((ROOT / 'results/ui-test-results.json').read_text())
